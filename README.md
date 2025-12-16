@@ -24,24 +24,27 @@ API RESTful desenvolvida com **Java** e **Spring Boot** para gerenciamento de pr
 3. Execute o projeto via IDE (Utilizei o VsCode)
 
 
-##⚙️⚙️Como Testar (utilizei Postman)
+## 🧪 Como Testar (Via Postman)
 
-#1. Cadastrar Produtos
-   POST /produtos
-   {
+1. Cadastrar Produtos
+Rota: POST /produtos
+{
   "nome": "Mouse",
   "preco": 50.0
 }
 
 
-#2. Criar Pedido
-  POST /pedidos
+
+2. Criar Pedido (Simples)
+Rota: POST /pedidos
+
+
 {
-    "produtos": [
-        {
-            "id": 1,
-            "preco": 50.0
-        }
-    ]
+  "produtos": [
+    {
+      "id": 1,
+      "preco": 50.0
+    }
+  ]
 }
            
