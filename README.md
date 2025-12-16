@@ -6,39 +6,44 @@ API RESTful desenvolvida com **Java** e **Spring Boot** para gerenciamento de pr
 
 - **Produtos:** Cadastro e listagem de produtos.
 - **Pedidos:** Criação de pedidos com itens associados.
-- **Regra de Negócio:** Cálculo automático do valor total.
-  - **Desconto:** Pedidos acima de **R$ 200,00** recebem automaticamente **10% de desconto**.
+- 
+  -----------------------------------------------------
 
-## 🚀 Tecnologias Utilizadas
+  ## 🚀 Tecnologias Utilizadas
 
 - Java 17
 - Spring Boot
-- Spring Data JPA
-- Banco de Dados (MySQL)
-- Maven
+- MySql
+---------------------------------------------------------
 
-## ⚙️ Como Executar
+COMO RODAR:
+1. Clone o repositorio.
+2. Configure o banco no application.properties.
+3. Rode o projeto na sua IDE (utilizei VsCode)
 
-1. Clone o repositório: https://github.com/geoo-bots/Desafio-tecnico-API-Ecommerce.git
-2. Configure o banco de dados no arquivo application.properties
-3. Execute o projeto via IDE (Utilizei o VsCode)
+---------------------------------------------------------
 
+COMO TESTAR (POSTMAN):
 
-## 🧪 Como Testar (Via Postman)
-
-1. Cadastrar Produtos
+TESTE 1: CADASTRAR PRODUTO
+<br>
 Rota: POST /produtos
+<br>
+JSON para enviar:
+<pre>
 {
   "nome": "Mouse",
   "preco": 50.0
 }
+</pre>
+<br>
 
-
-
-2. Criar Pedido (Simples)
+TESTE 2: CRIAR PEDIDO
+<br>
 Rota: POST /pedidos
-
-
+<br>
+JSON para enviar:
+<pre>
 {
   "produtos": [
     {
@@ -47,4 +52,21 @@ Rota: POST /pedidos
     }
   ]
 }
-           
+</pre>
+<br>
+
+TESTE 3: CRIAR PEDIDO COM VALOR ACIMA DE 200
+<br>
+Rota: POST /pedidos
+<br>
+JSON para enviar:
+<pre>
+{
+  "produtos": [
+    { "id": 1, "preco": 50.0 },
+    { "id": 1, "preco": 50.0 },
+    { "id": 1, "preco": 50.0 },
+    { "id": 1, "preco": 60.0 }
+  ]
+}
+</pre>
