@@ -26,10 +26,10 @@ API RESTful desenvolvida com **Java** e **Spring Boot** para gerenciamento de pr
 ##⚙️⚙️Como Testar
 1. Cadastrar Produtos
    POST /produtos
-   ```{
+   {
   "nome": "Mouse",
   "preco": 50.0
-}```
+}
 
 2. Criar Pedido
   POST /pedidos
